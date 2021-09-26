@@ -1,0 +1,58 @@
+model:
+    multiscale:
+        multiscale_input_channel: 3
+        multiscale_output_channel: 1
+    cross_attention:
+        att_type: "soft_att"
+    seq2vec:
+        arch: skipthoughts
+        dir_st: seq2vec/
+        type: BayesianUniSkip
+        dropout: 0.25
+        fixed_emb: False
+    fusion:
+        correct_local_hidden_dim: 512
+        correct_local_hidden_drop: 0.2
+        supplement_global_hidden_dim: 512
+        supplement_global_hidden_drop: 0.2
+        dynamic_fusion_dim: 512
+        dynamic_fusion_drop: 0.2
+        mca_DROPOUT_R: 0.1
+        mca_HIDDEN_SIZE: 512
+        mca_FF_SIZE: 1024
+        mca_MULTI_HEAD: 8
+        mca_HIDDEN_SIZE_HEAD: 64
+    embed:
+        embed_dim: 512
+    global_local_weight:
+        global: None
+        local: None
+    name: GaLR
+dataset:
+    datatype: rsitmd
+    data_split:
+    data_path: 'data/rsitmd_precomp/'
+    image_path: 'data/rsicd_precomp/rsitmd_images/'
+    vocab_path: 'vocab/rsitmd_splits_vocab.json'
+    local_path: './detection/representation/RSITMD/rsitmd_local.npy'
+    batch_size: 100
+    batch_size_val: 70
+    workers: 3
+optim:
+    epochs: 50
+    lr: 0.0002
+    lr_decay_param: 0.7
+    lr_update_epoch: 20
+    grad_clip: 0
+    max_violation: 0
+    margin: 0.2
+    resume: False
+logs:
+    eval_step: 1
+    print_freq: 10
+    ckpt_save_path: "checkpoint/"
+    logger_name: 'logs/'
+k_fold:
+    experiment_name: 'rsitmd_GaLR_MIDF'
+    nums: 3
+    current_num: 0
