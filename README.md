@@ -28,7 +28,7 @@ The proposed multi-level information dynamic fusion module. The method falls int
 The proposed multivariate rerank algorithm. In order to make full use of the similarity matrix, we use k candidates for reverse search and to optimize the similarity results by considering multiple ranking factors. The figure shows an illustration of multivariate rerank when k = 3, using image i for retrieval.
 
 ### Performance
-![midf](./figure/performance.jpg)
+![performance](./figure/performance.jpg)
 Comparisons of Retrieval Performance on RSICD and RSITMD Testset.
 ### -------------------------------------------------------------------------------------
 ## IMPLEMENTATION
