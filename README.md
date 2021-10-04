@@ -24,7 +24,7 @@ The proposed RSCTIR framework based on global and local information. Compared wi
 The proposed multi-level information dynamic fusion module. The method falls into two stages of feature retransformation and dynamic fusion. MIDF first uses SA and GA modules to retransform features, then uses global information to supplement local information and leverages the latter to correct the former. Further dynamic fusion of multi-level features is accomplished through the fabricated dynamic fusion module.
 
 ### Multivariate Rerank
-<img src="https://github.com/xiaoyuan1996/GaLR/blob/main/figure/similarty.jpg" width="600"  alt="similarity"/>
+<img src="https://github.com/xiaoyuan1996/GaLR/blob/main/figure/similartiy.jpg" width="600"  alt="similarity"/>
 The proposed multivariate rerank algorithm. In order to make full use of the similarity matrix, we use k candidates for reverse search and to optimize the similarity results by considering multiple ranking factors. The figure shows an illustration of multivariate rerank when k = 3, using image i for retrieval.
 
 ### Performance
