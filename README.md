@@ -19,6 +19,10 @@ Our method has achieved the state-of-the-art performance (2021.10) in RS cross-m
 ![arch image](./figure/GaLR.jpg)
 The proposed RSCTIR framework based on global and local information. Compared with the retrieval models constructed using only global features, GaLR incorporates optimized local features in the visual encoding considering the target redundancy of RS. The multi-level information dynamic fusion module is designed to fuse the two types of information, using the global information to supplement the local information and utilizing the latter to correct the former. The suggested multivariate rerank algorithm as a post-processing method further improves the retrieval accuracy without extra training.
 
+### DREA
+To alleviate the pressure on the model from redundant target relations and increase the model’s focus on salient instances, we come up with a denoised representation matrix and a enhanced adjacency matrix to assist the GCN in producing better local representations. 
+DREA filters the redundant features with high similarity and enhances the features of salient targets, which enables GaLR to obtain more transcendent visual representation.
+
 ### MIDF
 <img src="https://github.com/xiaoyuan1996/GaLR/blob/main/figure/MIDF.jpg" width="600"  alt="MIDF"/>
 The proposed multi-level information dynamic fusion module. The method falls into two stages of feature retransformation and dynamic fusion. MIDF first uses SA and GA modules to retransform features, then uses global information to supplement local information and leverages the latter to correct the former. Further dynamic fusion of multi-level features is accomplished through the fabricated dynamic fusion module.
