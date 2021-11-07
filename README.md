@@ -1,4 +1,5 @@
 # GaLR
+##### Author: Zhiqiang Yuan 
 
 <a href="https://github.com/xiaoyuan1996/retrievalSystem"><img src="https://travis-ci.org/Cadene/block.bootstrap.pytorch.svg?branch=master"/></a>
 ![Supported Python versions](https://img.shields.io/badge/python-3.7-blue.svg)
