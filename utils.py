@@ -146,7 +146,7 @@ def collect_neg(input):
     loss_n = torch.mean(output_r) + torch.mean(output_c)
     return loss_n
 
-def calcul_loss(scores, size, margin, loss_type="mse",max_violation=False, text_sim_matrix=None, param = "0.8 | 5"):
+def calcul_loss(scores, size, margin, max_violation=False):
     diagonal = scores.diag().view(size, 1)
 
     d1 = diagonal.expand_as(scores)
