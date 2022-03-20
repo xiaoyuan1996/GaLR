@@ -108,8 +108,6 @@ Note:
 2. We prepare some used file::
   (1)[seq2vec (Password:NIST)](https://pan.baidu.com/s/1jz61ZYs8NZflhU_Mm4PbaQ)
   (2)[RSICD images (Password:NIST)](https://pan.baidu.com/s/1lH5m047P9m2IvoZMPsoDsQ)
-  (3)[UCM images (Password:NIST)](https://pan.baidu.com/s/1K7vfmx2TfMFyViqTyJQSgg)
-  (4)[SYDNEY images (Password:NIST)](https://pan.baidu.com/s/1C-P674uYh7-XKUDpcJL2aA)
 ```
 
 ```bash
