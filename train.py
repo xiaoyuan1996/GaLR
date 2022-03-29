@@ -31,7 +31,7 @@ def parser_options():
 
     # load model options
     with open(opt.path_opt, 'r') as handle:
-        options = yaml.load(handle)
+        options = yaml.safe_load(handle)
 
     return options
 
