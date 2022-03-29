@@ -39,7 +39,7 @@ dataset:
     batch_size_val: 70
     workers: 3
 optim:
-    epochs: 30
+    epochs: 20
     lr: 0.0002
     lr_decay_param: 0.7
     lr_update_epoch: 20
@@ -54,5 +54,5 @@ logs:
     logger_name: 'logs/'
 k_fold:
     experiment_name: 'rsitmd_GaLR_MIDF'
-    nums: 1
+    nums: 3
     current_num: 0
