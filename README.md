@@ -1,3 +1,5 @@
+## The offical PyTorch code for paper ["Remote Sensing Cross-Modal Text-Image Retrieval Based on Global and Local Information", TGRS 2022.](https://doi.org/10.1109/TGRS.2022.3163706)
+
 # GaLR
 ##### Author: Zhiqiang Yuan 
 
