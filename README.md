@@ -145,3 +145,9 @@ Step3:
 
 Note: We use k-fold verity to do a fair compare. Other details please see the code itself.
 ```
+
+## Citation
+If you feel this code helpful or use this code or dataset, please cite it as
+```
+Z. Yuan et al., "Remote Sensing Cross-Modal Text-Image Retrieval Based on Global and Local Information," in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2022.3163706.
+```
