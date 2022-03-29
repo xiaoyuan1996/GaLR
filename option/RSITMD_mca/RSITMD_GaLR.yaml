@@ -32,7 +32,7 @@ dataset:
     datatype: rsitmd
     data_split:
     data_path: 'data/rsitmd_precomp/'
-    image_path: 'data/rsicd_precomp/rsitmd_images/'
+    image_path: '/mnt/data/person_data/yuanzhiqiang/all_data/rsitmd_images/'
     vocab_path: 'vocab/rsitmd_splits_vocab.json'
     local_path: './detection/representation/RSITMD/rsitmd_local.npy'
     batch_size: 100
@@ -54,5 +54,5 @@ logs:
     logger_name: 'logs/'
 k_fold:
     experiment_name: 'rsitmd_GaLR_MIDF'
-    nums: 3
+    nums: 1
     current_num: 0

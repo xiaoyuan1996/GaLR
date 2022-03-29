@@ -1,5 +1,5 @@
 cd ../..
-CARD=7
+CARD=1
 
 CUDA_VISIBLE_DEVICES=$CARD python train.py --path_opt option/RSITMD_mca/RSICD_GaLR.yaml
 
