@@ -8,13 +8,9 @@
 import os, random, copy
 import numpy as np
 import torch
-import torch.nn as nn
 import argparse
 import yaml
-import shutil
-import tensorboard_logger as tb_logger
 import logging
-import click
 
 import utils
 import data
@@ -26,7 +22,7 @@ import mytools
 def parser_options():
     # Hyper Parameters setting
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path_opt', default='option/SYDNEY_AMFMN.yaml', type=str,
+    parser.add_argument('--path_opt', default='option/RSITMD_mca/RSITMD_GaLR.yaml', type=str,
                         help='path to a yaml options file')
     opt = parser.parse_args()
 
@@ -36,19 +32,11 @@ def parser_options():
 
     return options
 
-def main(options, save_name="rsicd.npy", save_sim=False):
+def main(options):
 
     # choose model
     if options['model']['name'] == "GaLR":
         from layers import GaLR as models
-    elif options['model']['name'] == "GaLR_add_fusion":
-        from layers import GaLR_add_fusion as models
-    elif options['model']['name'] == "GaLR_add_fusion_simple":
-        from layers import GaLR_add_fusion_simple as models
-    elif options['model']['name'] == "GaLR_mca":
-        from layers import GaLR_mca as models
-    elif options['model']['name'] == "AMFMN":
-        from layers import AMFMN as models
     else:
         raise NotImplementedError
 
@@ -79,9 +67,6 @@ def main(options, save_name="rsicd.npy", save_sim=False):
 
     # evaluate on test set
     sims = engine.validate_test(test_loader, model)
-
-    if save_sim:
-        mytools.save_to_npy(sims, save_name)
 
     # get indicators
     (r1i, r5i, r10i, medri, meanri), _ = utils.acc_i2t2(sims)
@@ -123,7 +108,7 @@ if __name__ == '__main__':
         update_options = update_options_savepath(options, k)
 
         # run experiment
-        one_score = main(update_options, "sim_matrix/"+options['dataset']['datatype']+"_"+options['model']['name']+"_"+str(k)+".npy", True)
+        one_score = main(update_options)
         last_score.append(one_score)
 
         print("Complete evaluate {}th fold".format(k))
