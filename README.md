@@ -108,7 +108,7 @@ file structure:
 Note:
 1. In order to facilitate reproduction, we have provided processed annotations.
 2. We prepare some used file::
-  (1)[seq2vec (Password:NIST)](https://pan.baidu.com/s/1Jp74mYXGBReFjVD1G_xjNw)
+  (1)[seq2vec (Password:NIST)](https://pan.baidu.com/s/1FOPldSGO6ctETiXMlPGC8g)
   (2)[RSICD images (Password:NIST)](https://pan.baidu.com/s/1lH5m047P9m2IvoZMPsoDsQ)
 ```
 
